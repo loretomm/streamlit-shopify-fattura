@@ -28,7 +28,7 @@ def build_invoice_xml(order, protocol_number, invoice_date):
     nsmap = {
         None: "http://ivaservizi.agenziaentrate.gov.it/docs/xsd/fatture/v1.2"
     }
-    root = etree.Element("p:FatturaElettronica", nsmap=nsmap, attrib={"versione": "FPR12"})
+    root = etree.Element("FatturaElettronica", nsmap=nsmap, attrib={"versione": "FPR12"})
 
     # HEADER
     header = etree.SubElement(root, "FatturaElettronicaHeader")
